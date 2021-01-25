@@ -1,0 +1,95 @@
+document,
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(./images/background.jpg);
+  background-size: 20%;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.page {
+  height: 100%;
+  padding: 0 0 40px;
+  box-sizing: border-box;
+}
+
+.page__header {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.page__header::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  font-size: 40px;
+  color: #0f0;
+  font-weight: 100;
+}
+
+.phone {
+  float: right;
+  text-align: right;
+}
+
+.phone__number {
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+}
+
+.phone__caption {
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+}
+
+.page__main {
+  margin: 0 auto;
+  padding: 10px;
+  max-width: 1000px;
+  background: rgba(255, 255, 255, .9);
+  box-sizing: border-box;
+  min-height: 80%;
+}
+
+@media screen and (max-width: 1000px) {
+  .page {
+    padding: 0;
+  }
+
+  .page__header {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo,
+  .phone {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .page__main {
+    min-height: 70%;
+  }
+}
