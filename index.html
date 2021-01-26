@@ -4,27 +4,191 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="preconnect" href="https://fonts.gstatic.com"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,500&display=swap"/>
   <link rel="stylesheet" href="./style.css"/>
   <title>Лигаобувь</title>
 </head>
 <body>
   <div class="page">
-    <div class="page__header">
-      <div class="logo">
+    <div class="header page__header">
+      <div class="logo page__logo">
         Лигаобувь
       </div>
 
-      <div class="phone">
+      <div class="phone page__phone">
         <a href="tel:+79237172023" class="phone__number">+7 923 717-20-23</a>
 
         <div class="phone__caption">(Дмитрий)</div>
       </div>
     </div>
 
-    <div class="page__main">
-      adAds
+    <div class="main page__main">
+      <div class="main__menu">
+        <ul class="menu" data-menu>
+          <li class="menu__item">
+            <a href="#" class="menu__link menu__link_highlighted">Новинки</a>
+          </li>
+  
+          <li class="menu__item">
+            <a href="#" class="menu__link menu__link_highlighted">Акции</a>
+          </li>
+  
+          <li class="menu__item" data-has-submenu>
+            <div class="menu__link">Аляска</div>
+  
+            <ul class="menu__submenu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Мужская</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Подростковая</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="menu__item">
+            <a href="#" class="menu__link">Берцы</a>
+          </li>
+  
+          <li class="menu__item">
+            <div class="menu__link">Галоши</div>
+          </li>
+  
+          <li class="menu__item" data-has-submenu>
+            <a href="#" class="menu__link">Кеды</a>
+  
+            <ul class="menu__submenu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Мужские</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="menu__item" data-has-submenu>
+            <a href="#" class="menu__link">Рабочая</a>
+  
+            <ul class="menu__submenu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Мужская</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="menu__item" data-has-submenu>
+            <a href="#" class="menu__link">Садовая</a>
+  
+            <ul class="menu__submenu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Женская</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Мужская</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Детская</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="menu__item" data-has-submenu>
+            <a href="#" class="menu__link">Сандалии</a>
+  
+            <ul class="menu__submenu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Детские</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Подростковые</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Мужские</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="menu__item" data-has-submenu>
+            <a href="#" class="menu__link">Сапоги</a>
+  
+            <ul class="menu__submenu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Женские</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Детские</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Подростковые</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Мужские</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="menu__item" data-has-submenu>
+            <a href="#" class="menu__link">Сланцы</a>
+  
+            <ul class="menu__submenu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Мужские</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Женские</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Детские</a>
+              </li>
+  
+              <li class="menu__item">
+                <a href="#" class="menu__link">Подростковые</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="menu__item">
+            <a href="#" class="menu__link">Стельки</a>
+          </li>
+  
+          <li class="menu__item" data-has-submenu>
+            <a href="#" class="menu__link">Суконная</a>
+  
+            <ul class="menu__submenu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Женская</a>
+              </li>
+            </ul>
+          </li>
+  
+          <li class="menu__item">
+            <a href="#" class="menu__link">Тапки</a>
+          </li>
+  
+          <li class="menu__item">
+            <a href="#" class="menu__link">Чешки</a>
+          </li>
+        </ul>
+
+        <div class="menu-overlay" data-menu-overlay></div>
+
+        <button type="button" class="menu-opener" data-menu-opener>
+          Каталог
+        </button>
+      </div>
+
+      <div class="main__content">asdfa asdf asdfasdf </div>
     </div>
   </div>
+
+  <script src="./main.js"></script>
 </body>
 </html>
