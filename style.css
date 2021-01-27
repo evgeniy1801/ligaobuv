@@ -17,7 +17,7 @@ body {
 .menu-opener {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   margin-left: -75px;
   width: 150px;
@@ -33,6 +33,7 @@ body {
   text-align: center;
   cursor: pointer;
   transition: box-shadow .2s;
+  z-index: 1;
 }
 
 .menu-opener:hover {
@@ -202,6 +203,8 @@ body {
   font-size: 14px;
 }
 
+/*****************/
+
 .menu-overlay {
   display: none;
   position: absolute;
@@ -214,35 +217,108 @@ body {
 
 /*****************/
 
+.goods-list__row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.goods-list__item {
+  width: 25%;
+  box-sizing: border-box;
+  float: left;
+}
+
+/*****************/
+
+.good-card {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.good-card:hover {
+  box-shadow: 0 0 7px -2px rgba(0, 0, 0, .2);
+  border-color: transparent;
+}
+
+.good-card__image {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.good-card__image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.good-card__name {
+  font-size: 16px;
+  font-weight: 400;
+  color: #2a2e2b;
+  height: 38px;
+  overflow: hidden;
+}
+
+.good-card__price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #2a2e2b;
+  margin-top: 4px;
+  color: #f00;
+}
+
+.good-card__options-item {
+  font-size: 12px;
+  font-weight: 300;
+  color: #2a2e2b;
+  padding: 4px;
+}
+
+.good-card__options-item::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.good-card__options-item_foggy {
+  background: #eee;
+}
+
+.good-card__option-name {
+  float: left;
+}
+
+.good-card__option-value {
+  float: right;
+}
+
+/*****************/
+
+.liveinternet-counter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/*****************/
+
 @media screen and (max-width: 1000px) {
-  .page {
+  .main {
+    padding: 10px 10px 10px 150px;
+  }
+
+  .goods-list__item {
     padding: 0;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .page {
-    padding: 0 0 80px;
-  }
-
-  .logo {
-    font-size: 30px;
-  }
-
-  .phone {
-    padding-top: 0;
-  }
-
-  .phone__number {
-    font-size: 18px;
-  }
-
-  .phone__number-caption {
-    font-size: 12px;
-  }
-
+@media screen and (max-width: 800px) {
   .main {
-    padding-left: 20px;
+    padding: 10px;
   }
 
   .main__menu {
@@ -282,6 +358,84 @@ body {
   .menu-opener {
     display: block;
   }
+
+  .good-card__name {
+    font-size: 14px;
+    height: 34px;
+  }
+
+  .good-card__price {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    font-size: 30px;
+  }
+
+  .phone {
+    padding-top: 0;
+  }
+
+  .phone__number {
+    font-size: 18px;
+  }
+
+  .phone__number-caption {
+    font-size: 12px;
+  }
+
+  .goods-list__item {
+    float: none;
+    width: auto;
+    padding: 2px 0;
+  }
+
+  .good-card {
+    position: relative;
+    height: 136px;
+    padding: 0;
+  }
+
+  .good-card__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130px;
+    height: 130px;
+    padding: 0;
+  }
+
+  .good-card__heading {
+    padding-bottom: 5px;
+  }
+
+  .good-card__name {
+    font-size: 16px;
+    height: auto;
+  }
+
+  .good-card__details {
+    margin-left: 150px;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .good-card {
+    height: 130px;
+  }
+
+  .good-card__image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .good-card__details {
+    margin-left: 100px;
+    padding-top: 0;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -298,5 +452,14 @@ body {
 
   .page__main {
     min-height: 400px;
+  }
+
+  .good-card__name {
+    font-size: 14px;
+  }
+
+  .good-card__price {
+    padding-top: 5px;
+    font-size: 14px;
   }
 }
