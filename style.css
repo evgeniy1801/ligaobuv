@@ -135,7 +135,7 @@ body {
   font-size: 24px;
   font-weight: 100;
   margin: 0;
-  padding: 0 0 0 10px;
+  padding: 0 0 20px 10px;
 }
 
 /*****************/
@@ -232,6 +232,10 @@ body {
   clear: both;
 }
 
+.goods-list_catalog-root .goods-list__item {
+  text-align: center;
+}
+
 .goods-list__item {
   width: 25%;
   box-sizing: border-box;
@@ -308,7 +312,7 @@ body {
 /*****************/
 
 .breadcrumbs {
-  padding: 10px 0 20px 10px;
+  padding: 0 0 20px 10px;
 }
 
 .breadcrumbs::after {
@@ -447,6 +451,23 @@ body {
 
   .phone__number-caption {
     font-size: 12px;
+  }
+
+  .goods-list_catalog-root .goods-list__item {
+    text-align: left;
+  }
+
+  .goods-list_catalog-root .good-card {
+    height: 80px;
+  }
+
+  .goods-list_catalog-root .good-card__image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .goods-list_catalog-root .good-card__details {
+    margin-left: 90px;
   }
 
   .goods-list__item {
