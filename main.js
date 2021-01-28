@@ -30,11 +30,11 @@ function initMenu() {
   var menu = document.querySelector('[data-menu]');
 
   menuOpener.addEventListener('click', function() {
-    toggleClassName(menu, 'menu_opened');
+    toggleClassName(menu, 'main__menu_opened');
   });
 
   menuOverlay.addEventListener('click', function() {
-    toggleClassName(menu, 'menu_opened');
+    toggleClassName(menu, 'main__menu_opened');
   });
 }
 
