@@ -131,6 +131,15 @@ body {
 
 /*****************/
 
+.page-title {
+  font-size: 24px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0 0 0 10px;
+}
+
+/*****************/
+
 .menu {
   list-style: none;
   padding: 10px;
@@ -298,6 +307,47 @@ body {
 
 /*****************/
 
+.breadcrumbs {
+  padding: 10px 0 20px 10px;
+}
+
+.breadcrumbs::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.breadcrumbs__item {
+  float: left;
+}
+
+.breadcrumbs__item::after {
+  content: '/';
+  display: block;
+  padding: 0 5px;
+  float: left;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.breadcrumbs__item:last-child:after {
+  display: none;
+}
+
+.breadcrumbs__link {
+  display: block;
+  float: left;
+  font-size: 14px;
+  font-weight: 100;
+  color: #2a2e2b;
+}
+
+.breadcrumbs__link:hover {
+  text-decoration: none;
+}
+
+/*****************/
+
 .liveinternet-counter {
   position: absolute;
   right: 0;
@@ -432,6 +482,11 @@ body {
   .good-card__details {
     margin-left: 144px;
   }
+
+  .page-title,
+  .breadcrumbs {
+    padding-left: 0;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -443,6 +498,15 @@ body {
   .good-card__details {
     margin-left: 100px;
     padding-top: 0;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .breadcrumbs__item::after,
+  .breadcrumbs__link {
+    font-size: 12px;
   }
 }
 
