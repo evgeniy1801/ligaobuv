@@ -38,6 +38,37 @@ function initMenu() {
   });
 }
 
+function initPhotos() {
+  var photoOpeners = document.querySelectorAll('[data-photo-opener]');
+  
+  var openerCounter = 0;
+  var opener;
+  var photoOverlay;
+  
+  while (opener = photoOpeners[openerCounter]) {
+    photoOverlay = opener.parentNode.querySelector('[data-photo-overlay]');
+    
+    opener.addEventListener('click', function(event) {
+      var photoViewParent = event.target.nodeName === 'IMG'
+        ? event.target.parentNode.parentNode
+        : event.target.parentNode;
+
+      var photoView = photoViewParent.querySelector('[data-photo-view]')
+
+      toggleClassName(photoView, 'photo-view_opened');
+    });
+
+    photoOverlay.addEventListener('click', function(event) {
+      var photoView = event.target.parentNode;
+
+      toggleClassName(photoView, 'photo-view_opened');
+    });
+
+    openerCounter += 1;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   initMenu();
+  initPhotos();
 });
