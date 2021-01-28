@@ -99,9 +99,11 @@ body {
 /*****************/
 
 .logo {
+  display: block;
   font-size: 40px;
   color: #2a2e2b;
   font-weight: 100;
+  text-decoration: none;
 }
 
 /*****************/
@@ -184,12 +186,16 @@ body {
   padding-left: 15px;
 }
 
-.menu__link_highlighted {
-  font-style: italic;
-  font-weight: 500;
-  color: #b5f4ff;
-  background: url(./images/menu__link_highlighted.svg) right center no-repeat;
+.menu__link_highlighted_new {
+  background: url(./images/menu__link_highlighted_new.svg) right center no-repeat;
   background-size: 18px;
+  color: #0df319;
+}
+
+.menu__link_highlighted_action {
+  background: url(./images/menu__link_highlighted_action.svg) right center no-repeat;
+  background-size: 18px;
+  color: #85baf7;
 }
 
 .menu__submenu {
@@ -250,6 +256,7 @@ body {
   width: 100%;
   text-decoration: none;
   padding: 10px;
+  position: relative;
 }
 
 .good-card:hover {
@@ -282,6 +289,28 @@ body {
   color: #2a2e2b;
   margin-top: 4px;
   color: #f00;
+}
+
+.good-card__badge {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 10px;
+  width: 60px;
+  text-align: center;
+  font-size: 12px;
+  padding: 2px 0;
+  font-weight: 300;
+  border-radius: 3px;
+  color: #000;
+}
+
+.good-card__badge_type_new {
+  background: #0df319;
+}
+
+.good-card__badge_type_action {
+  background: #85baf7;
 }
 
 /*****************/
@@ -502,6 +531,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
   }
 
   .menu {
@@ -652,6 +682,13 @@ body {
   .breadcrumbs__item::after,
   .breadcrumbs__link {
     font-size: 12px;
+  }
+
+  .good-card__badge {
+    top: 5px;
+    left: 5px;
+    font-size: 10px;
+    width: 54px;
   }
 }
 
