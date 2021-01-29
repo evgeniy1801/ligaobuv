@@ -52,14 +52,6 @@ body {
   min-height: 482px;
 }
 
-.page__logo {
-  float: left;
-}
-
-.page__phone {
-  float: right;
-}
-
 .main {
   padding: 20px 20px 20px 160px;
   background: #fff;
@@ -73,41 +65,6 @@ body {
   left: -10px;
   top: -10px;
   z-index: 1;
-  margin: 0;
-}
-
-/*****************/
-
-.logo {
-  display: block;
-  font-size: 40px;
-  color: #2a2e2b;
-  font-weight: 100;
-  text-decoration: none;
-}
-
-/*****************/
-
-.phone {
-  padding-top: 10px;
-  text-align: right;
-}
-
-.phone__number {
-  font-size: 24px;
-  font-weight: 300;
-  color: #2a2e2b;
-  text-decoration: none;
-}
-
-.phone__caption {
-  font-size: 14px;
-  font-weight: 300;
-  font-style: italic;
-  color: #2a2e2b;
-}
-
-.page__sidebar {
   margin: 0;
 }
 
@@ -137,11 +94,17 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border-bottom: 1px solid #4b524d;
+}
+
+.menu__item:first-child {
   border-top: 1px solid #4b524d;
 }
 
-.menu__item:last-child {
-  border-bottom: 1px solid #4b524d;
+.menu__item_contacts {
+  border-top: 1px solid #4b524d;
+  margin-top: 60px;
+  font-style: italic;
 }
 
 .menu__link {
@@ -471,6 +434,30 @@ body {
 
 /*****************/
 
+.contacts {
+  padding: 0 10px;
+  font-size: 16px;
+  color: #2a2e2b;
+  font-weight: 300;
+}
+
+.contacts__phone {
+  padding: 10px 0;
+}
+
+.contacts__phone-link {
+  font-size: 20px;
+  font-weight: 300;
+  color: #f00;
+  text-decoration: none;
+}
+
+.contacts__phone-caption {
+  font-style: italic;
+}
+
+/*****************/
+
 .liveinternet-counter {
   position: absolute;
   right: 0;
@@ -500,6 +487,10 @@ body {
   .main {
     padding: 10px 10px 10px 150px;
     box-shadow: none;
+  }
+
+  .menu {
+    padding-bottom: 0;
   }
 
   .goods-list__item {
@@ -563,22 +554,6 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .logo {
-    font-size: 30px;
-  }
-
-  .phone {
-    padding-top: 0;
-  }
-
-  .phone__number {
-    font-size: 18px;
-  }
-
-  .phone__number-caption {
-    font-size: 12px;
-  }
-
   .goods-list_catalog-root .goods-list__item {
     text-align: left;
   }
@@ -648,6 +623,10 @@ body {
     padding-left: 0;
     padding-bottom: 10px;
   }
+
+  .contacts {
+    padding: 0;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -679,17 +658,6 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-  .page__logo,
-  .phone {
-    float: none;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .page__logo {
-    margin-bottom: 10px;
-  }
-
   .page__main {
     min-height: 400px;
   }
