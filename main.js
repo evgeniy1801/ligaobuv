@@ -47,6 +47,7 @@ function initPhotos() {
   
   while (opener = photoOpeners[openerCounter]) {
     photoOverlay = opener.parentNode.querySelector('[data-photo-overlay]');
+    photoCloser = photoOverlay.querySelector('[data-photo-closer]');
     
     opener.addEventListener('click', function(event) {
       var photoViewParent = event.target.nodeName === 'IMG'
@@ -60,6 +61,12 @@ function initPhotos() {
 
     photoOverlay.addEventListener('click', function(event) {
       var photoView = event.target.parentNode;
+
+      toggleClassName(photoView, 'photo-view_opened');
+    });
+
+    photoCloser.addEventListener('click', function(event) {
+      var photoView = event.target.parentNode.parentNode;
 
       toggleClassName(photoView, 'photo-view_opened');
     });
