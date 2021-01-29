@@ -42,13 +42,8 @@ body {
 /*****************/
 
 .page {
-  padding: 0 0 40px;
+  padding: 40px 0;
   box-sizing: border-box;
-}
-
-.page__header {
-  margin: 0 auto;
-  max-width: 1000px;
 }
 
 .page__main {
@@ -64,21 +59,6 @@ body {
 .page__phone {
   float: right;
 }
-
-/*****************/
-
-.header {
-  padding: 10px 10px 20px;
-  box-sizing: border-box;
-}
-
-.header::after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/*****************/
 
 .main {
   padding: 20px 20px 20px 160px;
@@ -509,8 +489,17 @@ body {
 /*****************/
 
 @media screen and (max-width: 1000px) {
+  body {
+    background: #fff;
+  }
+
+  .page {
+    padding: 0 0 60px;
+  }
+
   .main {
     padding: 10px 10px 10px 150px;
+    box-shadow: none;
   }
 
   .goods-list__item {
@@ -519,11 +508,8 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .page {
-    padding: 0 0 60px;
-  }
-
   .main {
+    height: 100%;
     padding: 10px;
   }
 
