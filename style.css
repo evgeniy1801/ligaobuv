@@ -275,6 +275,10 @@ body {
   background: #eee;
 }
 
+.options-list__item_highlighted {
+  font-weight: 500;
+}
+
 .options-list__item-name {
   float: left;
 }
