@@ -259,7 +259,7 @@ body {
 /*****************/
 
 .options-list__item {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 300;
   color: #2a2e2b;
   padding: 4px;
@@ -350,10 +350,6 @@ body {
 
 .good-view__options-list {
   padding: 0 10px;
-}
-
-.good-view__options-list .options-list__item {
-  font-size: 14px;
 }
 
 /*****************/
